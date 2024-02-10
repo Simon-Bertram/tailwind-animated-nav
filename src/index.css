@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+  .sidebar-icon {
+    @apply relative flex items-center justify-center w-12 h-12 mt-2 mb-2 mx-auto shadow-lg bg-gray-800 text-green-500;
+  }
+}
+
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
