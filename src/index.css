@@ -4,7 +4,109 @@
 
 @layer components {
   .sidebar-icon {
-    @apply relative flex items-center justify-center w-12 h-12 mt-2 mb-2 mx-auto shadow-lg bg-gray-800 text-green-500;
+    @apply relative flex items-center justify-center 
+    w-12 h-12 mt-5 mb-2 mx-auto 
+    cursor-pointer shadow-lg 
+    bg-gray-400 text-green-500 hover:text-white dark:bg-gray-800
+    rounded-3xl hover:rounded-xl
+    transition-all duration-300 ease-linear;
+  }
+
+  .sidebar-tooltip {
+    @apply absolute w-auto p-2 m-2 min-w-max left-16 rounded-md shadow-md 
+    text-white bg-gray-900 
+    text-sm font-bold 
+    transition-all duration-100 scale-0 origin-left;
+  }
+
+  .top-navigation {
+    @apply flex flex-row items-center justify-evenly
+    bg-gray-300 dark:bg-gray-700 bg-opacity-90
+    w-full h-16
+    m-0
+    shadow-lg;
+  }
+
+  .top-navigation-icon {
+    @apply text-gray-500
+    mr-3 ml-4
+    cursor-pointer hover:text-pink-500
+    transition duration-300 ease-in-out;
+  }
+
+  .top-navigation-icon:first {
+    @apply ml-auto mr-4;
+  }
+
+  .title-hashtag {
+    @apply text-2xl tracking-wider font-semibold text-gray-500
+    ml-2 my-auto;
+  }
+
+  .title-text {
+    @apply text-xl text-gray-700 tracking-wider font-semibold text-opacity-80
+    mr-auto ml-2 my-auto
+    transition duration-300 ease-in-out;
+  }
+
+  .search {
+    @apply w-1/5 flex items-center justify-start
+    bg-gray-400 dark:bg-gray-50
+    text-gray-500
+    px-2 h-9 ml-0 mr-0
+    rounded-md shadow-md
+    transition duration-300 ease-in-out;
+  }
+
+  .search-input {
+    @apply w-full font-sans font-semibold
+    bg-transparent outline-none
+    text-gray-500 placeholder-gray-500
+    pl-1 rounded;
+  }
+
+  /* Content Container */
+  .content-container {
+    @apply flex flex-col
+    bg-gray-300 dark:bg-gray-700
+    h-full w-full
+    overflow-hidden;
+  }
+
+  .content-list {
+    @apply flex flex-col items-center
+    h-full w-full;
+  }
+
+  /* Channel Bar */
+  .channel-container {
+    @apply flex flex-col items-center justify-start
+    p-2;
+  }
+
+  .channel-block {
+    @apply flex items-center justify-center
+    h-16;
+  }
+
+  .channel-block-text {
+    @apply w-full px-2 pb-0
+    text-gray-600 dark:text-gray-300
+    ml-4 align-middle;
+  }
+
+  .dropdown {
+    @apply m-0 w-full px-2 pb-0
+    transition duration-300 ease-in-out;
+  }
+
+  .dropdown-header {
+    @apply flex flex-row items-center justify-evenly;
+  }
+
+  .dropdown-header-text {
+    @apply text-gray-500 text-opacity-opacity-80
+    font-semibold;
   }
 }
 
