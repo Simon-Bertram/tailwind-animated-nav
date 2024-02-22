@@ -3,20 +3,31 @@ import { FaFire, FaPoo } from "react-icons/fa";
 
 const Sidebar = () => {
   return (
-    <div className="fixed top-0 left-0 h-screen w-16 bg-gray-900 text-white shadow-lg">
-      <nav>
+    <div className="fixed top-0 left-0 h-screen w-20 bg-gray-900 text-white shadow-lg">
+      <nav className="mt-8">
         <ul>
           <li>
-            <SideBarIcon icon={<FaFire size="28" />} />
+            <button aria-label="Home">
+              <SideBarIcon icon={<FaFire size="28" />} text="Home" />
+            </button>
           </li>
           <li>
-            <SideBarIcon icon={<BsPlus size="32" />} />
+            <button aria-label="New Item">
+              <SideBarIcon icon={<BsPlus size="32" />} text="New Item" />
+            </button>
           </li>
           <li>
-            <SideBarIcon icon={<BsFillLightningFill size="28" />} />
+            <button aria-label="Lighting">
+              <SideBarIcon
+                icon={<BsFillLightningFill size="28" />}
+                text="Trending"
+              />
+            </button>
           </li>
           <li>
-            <SideBarIcon icon={<FaPoo size="24" />} />
+            <button aria-label="Poo">
+              <SideBarIcon icon={<FaPoo size="24" />} text="Foobar" />
+            </button>
           </li>
         </ul>
       </nav>
@@ -24,8 +35,13 @@ const Sidebar = () => {
   );
 };
 
-const SideBarIcon = ({ icon }) => {
-  return <div className="sidebar-icon">{icon}</div>;
+const SideBarIcon = ({ icon, text = "tooltip 💡'" }) => {
+  return (
+    <div className="sidebar-icon group">
+      {icon}
+      <span className="sidebar-tooltip group-hover:scale-100">{text}</span>
+    </div>
+  );
 };
 
 export default Sidebar;
