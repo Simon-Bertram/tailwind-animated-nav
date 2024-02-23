@@ -81,12 +81,37 @@ const BottomBar = () => {
 };
 
 const Post = ({ name, timestamp, text }) => {
-  const seed = Math.floor(Math.random() * 100);
+  const avatars = [
+    {
+      name: "Katsuko Saruhashi",
+      imageId: "YfeOqp2",
+    },
+    {
+      name: "Aklilu Lemma",
+      imageId: "OKS67lh",
+    },
+
+    {
+      name: "Lin Lanying",
+      imageId: "1bX5QH6",
+    },
+
+    { name: "Lin Lanying", imageId: "1bX5QH6" },
+  ];
+
+  let randomAvatar = avatars[Math.floor(Math.random() * avatars.length)];
+  console.log(randomAvatar);
 
   return (
     <div className={"post"}>
       <div className="avatar-wrapper">
-        <img src="" alt="" className="avatar" />
+        <Avatar
+          size={100}
+          person={{
+            name: randomAvatar.name,
+            imageId: randomAvatar.imageId,
+          }}
+        />
       </div>
 
       <div className="post-content">

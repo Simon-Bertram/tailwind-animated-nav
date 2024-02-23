@@ -106,6 +106,27 @@
     mr-2 cursor-pointer;
   }
 
+  .avatar-wrapper {
+    @apply flex flex-col items-center
+    w-12
+    ml-auto mb-auto;
+  }
+
+  .avatar {
+    @apply flex-none
+    w-12 h-full
+    rounded-full shadow-md
+    object-cover bg-gray-100
+    mb-auto
+    cursor-pointer;
+  }
+
+  .timestamp {
+    @apply text-xs text-left font-semibold
+    text-gray-500 dark:text-gray-600
+    ml-3;
+  }
+
   /* Channel Bar */
   .channel-container {
     @apply flex flex-col items-center justify-start
