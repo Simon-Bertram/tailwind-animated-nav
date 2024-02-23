@@ -1,5 +1,6 @@
 import TopNavigation from "./TopNavigation";
 import { BsPlus, BsPlusCircleFill } from "react-icons/bs";
+import Avatar from "../utils/Avatar";
 
 const ContentContainer = () => {
   return (

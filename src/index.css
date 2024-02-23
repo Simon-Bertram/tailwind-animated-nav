@@ -78,6 +78,34 @@
     h-full w-full;
   }
 
+  .post {
+    @apply w-full
+    flex flex-row items-center justify-evenly
+    py-4 px-8
+    cursor-pointer;
+  }
+
+  .post-selected {
+    @apply bg-green-400 dark:bg-gray-900
+    shadow-md;
+  }
+
+  .post-content {
+    @apply w-4/5
+    flex flex-col justify-start
+    ml-auto;
+  }
+
+  .post-text {
+    @apply text-lg text-gray-800 dark:text-white
+    mr-auto whitespace-normal;
+  }
+
+  .post-owner {
+    @apply font-semibold text-gray-800 dark:text-white
+    mr-2 cursor-pointer;
+  }
+
   /* Channel Bar */
   .channel-container {
     @apply flex flex-col items-center justify-start
