@@ -3,14 +3,13 @@ import { FaFire, FaPoo } from "react-icons/fa";
 
 const Sidebar = () => {
   return (
-    <div className="fixed top-0 left-0 h-screen w-20 bg-gray-900 text-white shadow-lg">
+    <div className="fixed top-0 left-0 h-screen w-22 flex flex-col bg-gray-900 bg-white dark:bg-gray-900 marker:shadow-lg">
       <nav className="mt-8">
         <ul>
-          <li>
-            <button aria-label="Home">
-              <SideBarIcon icon={<FaFire size="28" />} text="Home" />
-            </button>
-          </li>
+          <button aria-label="Home">
+            <SideBarIcon icon={<FaFire size="28" />} text="Home" />
+          </button>
+
           <li>
             <button aria-label="New Item">
               <SideBarIcon icon={<BsPlus size="32" />} text="New Item" />

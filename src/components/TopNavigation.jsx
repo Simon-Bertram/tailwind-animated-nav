@@ -13,10 +13,10 @@ const TopNavigation = () => {
     <div className="top-navigation">
       <HashtagIcon />
       <Title />
+      <ThemeIcon />
       <Search />
       <BellIcon />
       <UserCircle />
-      <ThemeIcon />
     </div>
   );
 };

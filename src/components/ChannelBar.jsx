@@ -26,9 +26,21 @@ const Dropdown = ({ header, selections }) => {
     <div className="dropdown">
       <div onClick={() => setExpanded(!expanded)} className="dropdown-header">
         <ChevronIcon expanded={expanded} />
-        <h5>{header}</h5>
-        <FaPlus size="12" />
+        <h5
+          className={
+            expanded ? "dropdown-header-text-selected" : "dropdown-header-text"
+          }
+        >
+          {header}
+        </h5>
+        <FaPlus
+          size="12"
+          className="text-accent text-opacity-80 my-auto ml-auto"
+        />
       </div>
+      {expanded &&
+        selections &&
+        selections.map((selection) => <TopicSelection selection={selection} />)}
     </div>
   );
 };
